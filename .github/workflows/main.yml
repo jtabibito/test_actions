@@ -54,6 +54,6 @@ jobs:
           npm run build  # 假设此命令会将 src 目录编译到 dist
 
       - name: Run action from another repository
-        uses: jtabibito/platform-adapter@action/test
+        uses: jtabibito/platform-adapter@actiontest
         with:
           some-input: value
