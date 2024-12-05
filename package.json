@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@galacean/engine": "1.4.0-alpha.0",
+    "@galacean/engine-toolkit": "1.4.0-alpha.1",
+    "@galacean/engine-spine": "4.2.0-beta.0",
+    "@galacean/engine-physics-physx": "1.4.0-alpha.0",
+    "@galacean/engine-physics-lite": "1.4.0-alpha.0",
+    "@galacean/engine-lottie": "1.1.1",
+    "@galacean/engine-xr": "1.4.0-alpha.0",
+    "@galacean/engine-shader-lab": "1.4.0-alpha.0"
+  }
+}
