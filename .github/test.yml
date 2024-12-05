@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+
+      # after pnpm
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '>=22.6.0'
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Bundle jtabibito/test@0.1
+        uses: jtabibito/test@v2
+        with:
+          ADAPTER_BUNDLE_SETTINGS: |
+            {
+              "polyfill": true,
+              "engine": [
+                "node_modules/@galacean/engine/dist/module.js",
+                "node_modules/@galacean/engine-lottie/dist/module.js",
+                "node_modules/@galacean/engine-physics-lite/dist/module.js",
+                "node_modules/@galacean/engine-physics-physx/dist/module.js",
+                "node_modules/@galacean/engine-shader-lab/dist/module.js",
+                "node_modules/@galacean/engine-spine/dist/module.js",
+                "node_modules/@galacean/engine-toolkit/dist/es/index.js",
+                "node_modules/@galacean/engine-xr/dist/module.js"
+              ],
+              "jsWASMLoader": [
+                "node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
+              ]
+            }
+
+      - name: Build the code
+        run: |
+          cd test-repo
+          npm install
+          npm run build  # 假设此命令会将 src 目录编译到 dist
+
+      - name: Run action from another repository
+        uses: jtabibito/platform-adapter@action/test
+        with:
+          some-input: value
