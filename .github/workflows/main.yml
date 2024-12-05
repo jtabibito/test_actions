@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Bundle jtabibito/test@0.1
-        uses: jtabibito/test@v2
+      - name: Bundle jtabibito/platform-adapter@actiontest
+        uses: jtabibito/platform-adapter@actiontest
         with:
           ADAPTER_BUNDLE_SETTINGS: |
             {
@@ -49,11 +49,7 @@ jobs:
 
       - name: Build the code
         run: |
-          cd test-repo
-          npm install
-          npm run build  # 假设此命令会将 src 目录编译到 dist
-
-      - name: Run action from another repository
-        uses: jtabibito/platform-adapter@actiontest
-        with:
-          some-input: value
+          cd jtabibito/platform-adapter@actiontest
+          pnpm install
+          pnpm run build:cli
+          pnpm run build
