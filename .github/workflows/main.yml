@@ -19,6 +19,9 @@ jobs:
       - name: List current directory
         run: ls -al  # 确认当前目录是否有package.json
 
+      - name: Install dependencies
+        run: pnpm install
+
       # after pnpm
       - name: Use Node.js LTS
         uses: actions/setup-node@v4
@@ -26,9 +29,6 @@ jobs:
           node-version: '>=22.6.0'
           registry-url: https://registry.npmjs.org/
           cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Bundle jtabibito/platform-adapter@actiontest
         uses: jtabibito/platform-adapter@actiontest
