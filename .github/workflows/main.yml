@@ -13,6 +13,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
+          version: 9.3.0
           run_install: true
 
       # after pnpm
