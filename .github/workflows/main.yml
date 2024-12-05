@@ -20,6 +20,8 @@ jobs:
         run: |
           pwd  # 打印当前工作目录
           ls -al  # 确认当前目录是否有package.json
+          ls ..
+          ls .
 
       # after pnpm
       - name: Use Node.js LTS
