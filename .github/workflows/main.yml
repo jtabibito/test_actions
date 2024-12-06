@@ -37,20 +37,7 @@ jobs:
         env:
           ADAPTER_BUNDLE_SETTINGS: |
             {
-              "polyfill": true,
-              "engine": [
-                "node_modules/@galacean/engine/dist/module.js",
-                "node_modules/@galacean/engine-lottie/dist/module.js",
-                "node_modules/@galacean/engine-physics-lite/dist/module.js",
-                "node_modules/@galacean/engine-physics-physx/dist/module.js",
-                "node_modules/@galacean/engine-shader-lab/dist/module.js",
-                "node_modules/@galacean/engine-spine/dist/module.js",
-                "node_modules/@galacean/engine-toolkit/dist/es/index.js",
-                "node_modules/@galacean/engine-xr/dist/module.js"
-              ],
-              "jsWASMLoader": [
-                "node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
-              ]
+              "polyfill": true
             }
 
       - name: List current direction
