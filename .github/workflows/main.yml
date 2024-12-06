@@ -60,7 +60,4 @@ jobs:
               ]
             }
           run: |
-            cd jtabibito/platform-adapter@actiontest
-            pnpm install
-            pnpm run build:cli
-            pnpm run build
+            ls
