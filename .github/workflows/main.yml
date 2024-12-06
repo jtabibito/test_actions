@@ -39,14 +39,14 @@ jobs:
             {
               "polyfill": true,
               "engine": [
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-lottie/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-physics-lite/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-physics-physx/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-shader-lab/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-spine/dist/module.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-toolkit/dist/es/index.js",
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-xr/dist/module.js"
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-lottie/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-physics-lite/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-physics-physx/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-shader-lab/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-spine/dist/module.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-toolkit/dist/es/index.js",
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-xr/dist/module.js"
               ],
               "jsWASMLoader": [
                 "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
