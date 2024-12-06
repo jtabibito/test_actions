@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Bundle jtabibito/platform-adapter@actiontest
-        uses: jtabibito/platform-adapter@actiontest
+        uses: jtabibito/platform-adapter@init
         env:
           ADAPTER_BUNDLE_SETTINGS: |
             {
