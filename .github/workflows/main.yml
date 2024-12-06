@@ -34,7 +34,7 @@ jobs:
 
       - name: Bundle jtabibito/platform-adapter@actiontest
         uses: jtabibito/platform-adapter@actiontest
-        with:
+        env:
           ADAPTER_BUNDLE_SETTINGS: |
             {
               "polyfill": true,
