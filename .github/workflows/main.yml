@@ -59,10 +59,8 @@ jobs:
                 "node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
               ]
             }
-
-      - name: Build the code
-        run: |
-          cd jtabibito/platform-adapter@actiontest
-          pnpm install
-          pnpm run build:cli
-          pnpm run build
+          run: |
+            cd jtabibito/platform-adapter@actiontest
+            pnpm install
+            pnpm run build:cli
+            pnpm run build
