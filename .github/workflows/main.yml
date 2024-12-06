@@ -52,3 +52,6 @@ jobs:
                 "node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
               ]
             }
+
+      - name: List current direction
+        run: ls
