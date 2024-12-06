@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Bundle jtabibito/platform-adapter@actiontest
+      - name: Bundle polyfill and engine
         uses: jtabibito/platform-adapter@init
         env:
           ADAPTER_BUNDLE_SETTINGS: |
@@ -50,7 +50,8 @@ jobs:
               ],
               "jsWASMLoader": [
                 "${{ github.workspace }}/node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
-              ]
+              ],
+              "outputDir": "${{ github.workspace }}"
             }
 
       - name: List current direction
