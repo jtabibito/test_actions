@@ -54,4 +54,6 @@ jobs:
             }
 
       - name: List current direction
-        run: ls -al
+        run: |
+          pwd
+          ls -al
