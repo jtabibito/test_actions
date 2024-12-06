@@ -49,7 +49,7 @@ jobs:
                 "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-xr/dist/module.js"
               ],
               "jsWASMLoader": [
-                "${{ env.PROJECT_ROOT }/node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
+                "${{ env.PROJECT_ROOT }}/node_modules/@galacean/engine-physics-physx/libs/physx.release.js"
               ]
             }
 
