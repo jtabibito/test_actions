@@ -1,5 +1,8 @@
 {
   "packageManager": "pnpm@9.3.0",
+  "scripts": {
+    "changelog": "conventional-changelog -o CHANGELOG.md"
+  },
   "dependencies": {
     "@galacean/engine": "1.4.0-alpha.0",
     "@galacean/engine-toolkit": "1.4.0-alpha.1",
@@ -9,5 +12,8 @@
     "@galacean/engine-lottie": "1.1.1",
     "@galacean/engine-xr": "1.4.0-alpha.0",
     "@galacean/engine-shader-lab": "1.4.0-alpha.0"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^5.0.0"
   }
 }
