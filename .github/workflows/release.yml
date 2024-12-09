@@ -28,6 +28,3 @@ jobs:
           body: |
             Changes in this release:
             - Add your release notes here.
-          files: '**'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
