@@ -6,7 +6,10 @@ on:
       - 'v*'  # Trigger on version tags, e.g., v1.0, v2.0.1
 
 jobs:
-  create-release:
+  release:
+    permissions:
+      contents: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
