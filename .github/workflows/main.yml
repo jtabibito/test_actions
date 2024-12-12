@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Bundle polyfill and engine
-        uses: jtabibito/platform-adapter@init
+        uses: jtabibito/platform-adapter@feat/release-ci
         env:
           ADAPTER_BUNDLE_SETTINGS: |
             {
